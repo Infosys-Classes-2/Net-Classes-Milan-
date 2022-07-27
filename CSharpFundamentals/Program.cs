@@ -2,9 +2,13 @@
 using System;
 
 
-Console.WriteLine("What is your Name?");
-string name =Console.ReadLine();
+Console.Write("What is your FullName?");
+var fullName =Console.ReadLine();
+var len= fullName.IndexOf(" ");
+var firstName = fullName.Substring(0,len);
 
 
 
-Console.WriteLine($"Hello, {name}");
+Console.WriteLine($"Hello, {firstName}");
+
+
