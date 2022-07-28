@@ -18,10 +18,10 @@ using System;
 // string converted = text.ToUpper();
 // Console.WriteLine($"The Converted Text is: {converted}");
 
-// Convert Meter to Feet
+//  work 2.2 Convert Meter to Feet
 Console.WriteLine("Enter the length in meters");
 var Meter = Console.ReadLine();
 double convert = double.Parse(Meter);
 Console.WriteLine($"the {meter} is converted from string to double {convert}");
 var feet = 3.2808 * convert;
-Console.WriteLine($"{Meter} is {feet} feet");
+Console.WriteLine($"The {Meter} is {feet} feet");
