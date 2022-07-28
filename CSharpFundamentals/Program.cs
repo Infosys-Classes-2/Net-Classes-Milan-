@@ -33,8 +33,21 @@ Console.WriteLine($"The {Meter} is {feet} feet");
 
 
 /* ASSIGNMENT Program to calculate area of circle. */
-Console.WriteLine("Enter the radius of Circle");
+
+
+/* Console.WriteLine("Enter the radius of Circle");
 var radius =Console.ReadLine();
 double convertedRadius =double.Parse(radius);
 var area = 2*3.14*convertedRadius;
-Console.WriteLine($"The Area of circle is,{area}");
+Console.WriteLine($"The Area of circle is,{area}"); */
+
+
+
+/* Program to convert days to years, months, weeks and days. */
+
+Console.WriteLine("Enter the number of Days :");
+double days= double.Parse(Console.ReadLine());
+double years = days/365;
+double months = days/30;
+double weeks =  days/7;
+Console.WriteLine($"The {days} days, consits of {years} Years, {months} Months, {weeks} Weeks and {days} Days.");
