@@ -46,8 +46,9 @@ Console.WriteLine($"The Area of circle is,{area}"); */
 /* Program to convert days to years, months, weeks and days. */
 
 Console.WriteLine("Enter the number of Days :");
-double days= double.Parse(Console.ReadLine());
-double years = days/365;
-double months = days/30;
-double weeks =  days/7;
+double days= short.Parse(Console.ReadLine());
+var years = Math.Truncate(days / 365);
+var months = Math.Truncate(days / 30);
+var weeks =  Math.Truncate(days / 7);
 Console.WriteLine($"The {days} days, consits of {years} Years, {months} Months, {weeks} Weeks and {days} Days.");
+
