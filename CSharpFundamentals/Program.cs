@@ -38,7 +38,7 @@ Console.WriteLine($"The {Meter} is {feet} feet");
 /* Console.WriteLine("Enter the radius of Circle");
 var radius =Console.ReadLine();
 double convertedRadius =double.Parse(radius);
-var area = 2*3.14*convertedRadius;
+var area = 3.14*convertedRadius * convertedRadius;
 Console.WriteLine($"The Area of circle is,{area}"); */
 
 
@@ -48,7 +48,8 @@ Console.WriteLine($"The Area of circle is,{area}"); */
 Console.WriteLine("Enter the number of Days :");
 double days= short.Parse(Console.ReadLine());
 var years = Math.Truncate(days / 365);
-var months = Math.Truncate(days / 30);
-var weeks =  Math.Truncate(days / 7);
-Console.WriteLine($"The {days} days, consits of {years} Years, {months} Months, {weeks} Weeks and {days} Days.");
+var months = Math.Truncate(days % 365 /30);
+var weeks =  Math.Truncate(((days % 365) % 30 ) /7);
+var leftDays = Math.Truncate(((days % 365) % 30) %7);
+Console.WriteLine($"The {days} days, consits of {years} Years, {months} Months, {weeks} Weeks and {leftDays} Days.");
 
