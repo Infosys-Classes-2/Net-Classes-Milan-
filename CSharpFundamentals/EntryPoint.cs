@@ -21,6 +21,6 @@ class Test
         br.PatternOne(); */
 
         Pattern1 patt = new();
-        patt.PatternOne();
+        patt.PrimeNum();
     }
 }
