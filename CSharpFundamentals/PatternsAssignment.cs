@@ -7,8 +7,9 @@ internal class Pattern1{
                     bool isPrime= true;
                     Console.WriteLine("the Prime numbers:");
                      for(short num=2; num <=500; num++ ){
+                        isPrime =true;
                         for(short j=2; j<=500; j++){
-                            if(num !=j && num%j ==0){
+                            if(num !=j && num%j == 0){
                                 isPrime= false;
                                 break;
                             }
@@ -17,7 +18,7 @@ internal class Pattern1{
                         if(isPrime){
                             Console.Write("\t" + num);
                         }
-                            isPrime =true;
+                            
         
                      }
                      
