@@ -16,7 +16,11 @@ class Test
         cow.PrintDetails(); */ 
         
         
-        Branches br = new();
-        br.LearnBranching();
+     /*    BranchesAndLoops br = new();
+       // br.LearnBranching();
+        br.PatternOne(); */
+
+        Pattern1 patt = new();
+        patt.PatternOne();
     }
 }

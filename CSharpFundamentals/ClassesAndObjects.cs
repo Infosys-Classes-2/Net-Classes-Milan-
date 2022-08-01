@@ -1,6 +1,6 @@
 
 /* Animal */
-using System;
+/* using System;
   class Animal
 {
     //Members : fields, methods
@@ -23,3 +23,4 @@ using System;
     }
 
 }
+ */
