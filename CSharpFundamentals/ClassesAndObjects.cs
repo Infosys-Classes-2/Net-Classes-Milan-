@@ -6,12 +6,13 @@ using System;
     //Members : fields, methods
     // Access modifiers : public, private, internal, protected
     public float weight ;
-     internal string type;
+    internal string type;
 
     // methods
     void Eat()
 
     {
+        
         Console.WriteLine(type + "" +"is Eating" );
     }
 

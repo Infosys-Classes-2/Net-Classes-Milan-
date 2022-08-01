@@ -54,3 +54,5 @@ var leftDays = Math.Truncate(((days % 365) % 30) %7);
 Console.WriteLine($"The {days} days, consits of {years} Years, {months} Months, {weeks} Weeks and {leftDays} Days.");
  */
 
+
+
