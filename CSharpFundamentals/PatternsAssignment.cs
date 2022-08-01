@@ -8,7 +8,7 @@ internal void PatternOne(){
 
         for(short row=1; row <=4; row++){
             for(short col=1; col <= row; col++){
-                Console.Write("* ");
+                Console.Write(col );
             }
             Console.WriteLine();
         }
@@ -16,6 +16,14 @@ internal void PatternOne(){
 
 
 }
+
+/* internal void Pattern2(){
+    for (){
+        for(){
+            
+        }
+    }
+} */
 
 
 
