@@ -20,7 +20,13 @@ class Test
        // br.LearnBranching();
         br.PatternOne(); */
 
-        Pattern1 patt = new();
-        patt.PrimeNum();
+       /*  Pattern1 patt = new();
+        patt.Pattern2(); */
+         
+         PatternWithFunction patternWithFunction =new();
+           patternWithFunction.PatternOneWithFunction(20);
+
+          patternWithFunction.PrintPatternTwoWithFunction(20);
+
     }
 }
