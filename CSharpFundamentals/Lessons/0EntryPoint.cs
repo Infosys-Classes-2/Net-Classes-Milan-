@@ -23,10 +23,16 @@ class Test
        /*  Pattern1 patt = new();
         patt.Pattern2(); */
          
-         PatternWithFunction patternWithFunction =new();
+        /*  PatternWithFunction patternWithFunction =new();
            patternWithFunction.PatternOneWithFunction(20);
 
-          patternWithFunction.PrintPatternTwoWithFunction(20);
+          patternWithFunction.PrintPatternTwoWithFunction(20); */
+
+          MethodsLearning methodsLearning =new();
+
+          short[] ages ={12,11,54,656,76,434,654,32,46,67,86,};
+          var (min , max ,average) = methodsLearning.GetMinMaxAndAverage(ages);
+          Console.WriteLine($"The minimum value is:{min}, The Maximum value:{max}, The average is {average}");
 
     }
 }
