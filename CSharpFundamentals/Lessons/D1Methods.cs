@@ -1,5 +1,5 @@
 using System;
-
+using System.Linq;
 
 public class MethodsLearning
 {
@@ -61,14 +61,14 @@ public class MethodsLearning
 
 
 
-        /*  CLASS WORK FIND MINIMUM MAXIMUM AND AVERAGE VALUE FROM ARGUEMENT AND RETURN*/
+    /*  CLASS WORK FIND MINIMUM MAXIMUM AND AVERAGE VALUE FROM ARGUEMENT AND RETURN*/
 
 
     public (short, short, int) GetMinMaxAndAverage(short[] numbers)
     {
-            short min = short.MaxValue, max = short.MinValue;
-            int average=0;
-             int totalNumbers = numbers.Length;
+        short min = short.MaxValue, max = short.MinValue;
+        int average = 0;
+        int totalNumbers = numbers.Length;
         foreach (short num in numbers)
         {
             if (num < min)
@@ -76,15 +76,56 @@ public class MethodsLearning
 
             if (num > max)
                 max = num;
-              average = num + average;
+            average = num + average;
         }
 
-        int averageOfNumbers= average/totalNumbers;
-      
-      
+        int averageOfNumbers = average / totalNumbers;
+
+
         return (min, max, averageOfNumbers);
     }
 
-    //variable number of arguements , named parameters,
 
+    // Declarative Programing
+    public (short, short) GetMinMaxAndAverageDeclarative(short[] numbers)
+    {
+        short min = numbers.Min();
+        short max = numbers.Max();
+        //short average = numbers.Average();
+
+
+
+        return (min, max);
+    }
+
+
+
+    //variable number of arguements , named parameters, oprional parameter
+
+    public void Test()
+    {
+        // Named Parameters
+        Add(y: 34, x: 444);
+        var product = Multiply(2, 2);
+        PrintText ("milan","snatosh","jenny","sanjeev","bishnu","krishna","hari", "prasad");
+    }
+
+    public double Multiply(double x, double y, double z = 1) //Here Z is optional arguemnet
+    {
+        return x * y * z;
+    }
+
+    // variable Parameter
+
+    public void PrintText(params String[] names)
+    {
+            foreach (var name in names)
+            {
+                Console.WriteLine(name);
+            }
+    }
+
+    //Expression bodied members, inline methods
+    //=> lyamda operator/ goesto /arrow operator
+    public float Divide(float x, float y) => x/y;
 }
