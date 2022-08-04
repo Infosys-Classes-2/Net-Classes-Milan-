@@ -11,7 +11,7 @@ public class MethodsLearning
 
     // Returns nothing , Takes some argueemnets
 
-    public void PrintNepalNTimes(int n)
+    public void PrintNepalNTimes(int n) 
     {
         for (int i = 0; i <= n; i++)
         {
