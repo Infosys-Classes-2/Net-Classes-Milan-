@@ -10,10 +10,10 @@ class Test
          Animal fish =new Animal(); */
 
 
-         /*  Console.WriteLine("Enter the weight of the animal");
-          cow.weight = Console.Readline() ; 
-          cow.type = "cow";
-          cow.PrintDetails();  */
+        /*  Console.WriteLine("Enter the weight of the animal");
+         cow.weight = Console.Readline() ; 
+         cow.type = "cow";
+         cow.PrintDetails();  */
 
 
         /* BranchesAndLoops br = new();
@@ -27,11 +27,20 @@ class Test
            patternWithFunction.PatternOneWithFunction(20);
            patternWithFunction.PrintPatternTwoWithFunction(20); */
 
-        MethodsLearning methodsLearning = new();
+        /*  MethodsLearning methodsLearning = new();
 
-        short[] ages = { 12, 11, 54, 656, 76, 434, 654, 32, 46, 67, 86, };
-        var (min, max) = methodsLearning.GetMinMaxAndAverageDeclarative(ages);
-        Console.WriteLine($"The minimum value is:{min}, The Maximum value:{max},");
+         short[] ages = { 12, 11, 54, 656, 76, 434, 654, 32, 46, 67, 86, };
+         var (min, max) = methodsLearning.GetMinMaxAndAverageDeclarative(ages);
+         Console.WriteLine($"The minimum value is:{min}, The Maximum value:{max},");
+  */
 
+
+        Shape2D shape2D = new("Rectangle");
+        shape2D.PrintDetail();
+    
+    
+    
+    
+    
     }
 }
