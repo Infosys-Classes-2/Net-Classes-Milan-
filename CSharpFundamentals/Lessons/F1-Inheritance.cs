@@ -60,6 +60,8 @@ public class YarsaGumba : Plant, IAnimal
     }
 }
 
+// this is interface used in Multilevel Inheritance
+
 public interface IAnimal
 {
     public void PrintAnimalDetail();
