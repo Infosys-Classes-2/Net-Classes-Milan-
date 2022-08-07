@@ -35,10 +35,14 @@ class Test
   */
 
 
-        Shape2D shape2D = new("Rectangle");
+   /*      Shape2D shape2D = new("Rectangle");
         shape2D.PrintDetail();
-    
-    
+     */
+
+
+
+     // for base class one
+       
     
     
     
