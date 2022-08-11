@@ -30,3 +30,12 @@ class Fibonacci
     
     }
 }
+
+class DecimalToBinaryConversion
+{
+    int[] Convert(){
+
+        
+    }
+    
+}
