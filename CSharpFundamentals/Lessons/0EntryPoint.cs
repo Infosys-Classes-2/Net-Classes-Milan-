@@ -1,5 +1,5 @@
 using System;
-class Test
+class EntryPoint
 {
     public static void Main()
     {
@@ -39,12 +39,17 @@ class Test
         shape2D.PrintDetail();
      */
 
+      // Product of digit
+      ProductOfDigit p1= new();
+      var x= p1.GetProduct("234");
+      Console.WriteLine(x);
+
+      // Fibonacii 
+      Fibonacci f1= new();
+     var y = f1.FindFibonacci(23);
+     var z =f1.GetNthFibIterative(23);
+     Console.WriteLine(y);
 
 
-     // for base class one
-       
-    
-    
-    
     }
 }
