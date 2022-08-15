@@ -27,7 +27,7 @@ public class LINQ
         var cubes = numbers.Select(x => x * x * x);
 
         // 5. Get Square of all even numbers in Numbers
-        var square = numbers.Where(x => x % 2== 0 ).Select(x=> x*x);
+        var square = numbers.Where(x => x % 2== 0 ).Select(y=> y*y);
     }
 
     private bool PerfectSquare(int n)
