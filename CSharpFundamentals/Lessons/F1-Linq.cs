@@ -7,6 +7,20 @@ using System.Linq;
 public class LINQ
 {
     int[] numbers = { 3, 4, 5, 6, 7, 8, 9, 23, 44, 56, 67, 89, };
+    List<string> names = new List<string>
+    {
+        "milannn",
+        "Jenny",
+        "dhiraj",
+        "santosh",
+        "pravin",
+        "sonu",
+        "ambika",
+        "babita",
+        "shova",
+        "manju",
+        "om"
+    };
 
     public void LearnLINQ()
     {
@@ -27,7 +41,25 @@ public class LINQ
         var cubes = numbers.Select(x => x * x * x);
 
         // 5. Get Square of all even numbers in Numbers
-        var square = numbers.Where(x => x % 2== 0 ).Select(y=> y*y);
+        var square = numbers.Where(x => x % 2 == 0).Select(y => y * y);
+
+        // 6. Get first five items after skipping first (2)
+        var firstFive = numbers.Skip(2).Take(5);
+
+
+            //   All and ANY are Quantifiers
+
+        // 7. Check all if All numbers in List are Even
+        var checkIfAllEven = numbers.All(x => (x & 1) == 0);
+
+        // 8. Check if any numbrs is even
+        var checkIfAnyEven = numbers.Any(x => (x & 1) == 0);
+
+        // 9. Get all Names starting with Letters A
+        var namesStringA= names.Where(x=>x.ToUpper().StartsWith('A'));
+
+        //10 . Get all Names with length greater than 5 char
+        var nameLength = names.Where(x=>x.Length > 5);
     }
 
     private bool PerfectSquare(int n)
