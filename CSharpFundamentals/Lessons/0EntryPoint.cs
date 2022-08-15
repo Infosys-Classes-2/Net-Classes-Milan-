@@ -38,7 +38,7 @@ class EntryPoint
    /*      Shape2D shape2D = new("Rectangle");
         shape2D.PrintDetail();
      */
-
+/* 
       // Product of digit
       ProductOfDigit p1= new();
       var x= p1.GetProduct("234");
@@ -49,7 +49,10 @@ class EntryPoint
      var y = f1.FindFibonacci(23);
      var z =f1.GetNthFibIterative(23);
      Console.WriteLine(y);
+ */
 
+ LINQ linq = new();
+ linq.LearnLINQ();
 
     }
 }
