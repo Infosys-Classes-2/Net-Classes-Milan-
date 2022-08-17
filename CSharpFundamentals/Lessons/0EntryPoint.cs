@@ -1,4 +1,5 @@
 using System;
+
 class EntryPoint
 {
     public static void Main()
@@ -11,7 +12,7 @@ class EntryPoint
 
 
         /*  Console.WriteLine("Enter the weight of the animal");
-         cow.weight = Console.Readline() ; 
+         cow.weight = Console.Readline() ;
          cow.type = "cow";
          cow.PrintDetails();  */
 
@@ -35,24 +36,33 @@ class EntryPoint
   */
 
 
-   /*      Shape2D shape2D = new("Rectangle");
-        shape2D.PrintDetail();
-     */
-/* 
-      // Product of digit
-      ProductOfDigit p1= new();
-      var x= p1.GetProduct("234");
-      Console.WriteLine(x);
+        /*      Shape2D shape2D = new("Rectangle");
+             shape2D.PrintDetail();
+          */
+        /*
+              // Product of digit
+              ProductOfDigit p1= new();
+              var x= p1.GetProduct("234");
+              Console.WriteLine(x);
+        
+              // Fibonacii
+              Fibonacci f1= new();
+             var y = f1.FindFibonacci(23);
+             var z =f1.GetNthFibIterative(23);
+             Console.WriteLine(y);
+         */
 
-      // Fibonacii 
-      Fibonacci f1= new();
-     var y = f1.FindFibonacci(23);
-     var z =f1.GetNthFibIterative(23);
-     Console.WriteLine(y);
- */
+        /*  LINQ linq = new();
+         linq.LearnLINQ(); */
 
- LINQ linq = new();
- linq.LearnLINQ();
+        /*   LearnParallel lp = new();
+          lp.Do(); */
+       /*  FileIO fileio = new();
+        fileio.Do(); */
 
+        // Assignment 4
+
+        Assignment4 assignment4 = new();
+        assignment4.CreateFileAndFolders();
     }
 }
