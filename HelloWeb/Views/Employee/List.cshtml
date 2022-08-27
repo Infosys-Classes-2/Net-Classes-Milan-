@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Employee List";
+}
+@model List<Employee>
+
+<table class="table">
+    <a></a>
+    <a class="btn btn-outline-primary" asp-controller="employee" asp-action="add" role="button">Add Employees</a>
+    <tr>
+        <th>Id</th>
+       <th>First Name</th>
+       <th>Last Name</th>
+       <th>Designation</th>
+       <th>Level</th>
+       <th>Join Date</th>
+       <th>Department</th>
+       <th>Buttons</th>
+    </tr>
+    @foreach (Employee employee in Model)
+    {
+       <tr>
+           <td>@employee.Id</td>
+       <td>@employee.FirstName</td>
+       <td>@employee.LastName</td>
+       <td>@employee.Designaton</td>
+       <td>@employee.Level</td>
+       <td>@employee.JoinDate</td>
+       <td>@employee.Department</td>
+       <td><a class="btn btn-outline-primary" asp-controller="employee" asp-action="edit" role="button"/>edit employees</td>
+        <td><button type="button" class="btn btn-outline-primary">Delete</button></td>
+
+    </tr>
+    
+    }
+</table>
