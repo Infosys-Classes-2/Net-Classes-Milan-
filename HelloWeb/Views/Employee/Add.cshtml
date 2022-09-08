@@ -3,14 +3,11 @@
       ViewData["Title"] = "Add Employee";
 }
 <h4>
-    Add Employess
+ 
 </h4>
 <div class="card mt-2 p-4">
 <form asp-controller="employee" asp-action="add" method="post">
-   <div class="mb-3">
-    <label asp-for="Id" class="form-label"> </label>
-    <input asp-for="Id" class="form-control"/>
-    </div>
+   
     <div class="mb-3">
     <label asp-for="FirstName" class="form-label"> </label>
     <input asp-for="FirstName" class="form-control"/>
@@ -35,6 +32,6 @@
     <label asp-for="JoinDate" class="form-label"> </label>
     <input asp-for="JoinDate" class="form-control"/>
     </div>
-    <button type="submit" > Save Employees</button>
+        <button type="submit" class="btn btn-success"><i class="bi bi-save-fill"></i> Save Employee</button>
 </form>
 </div>

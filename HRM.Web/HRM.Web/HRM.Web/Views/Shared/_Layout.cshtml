@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - HRM.Web</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/HRM.Web.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://releases.transloadit.com/uppy/v3.0.1/uppy.min.css">
+</head>
+<body>
+    <header>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container-fluid">
+    <a class="navbar-brand" href="/">Home</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Employee
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/Employee/List">All Employees</a></li>
+            <li><a class="dropdown-item" href="/Employee/Add">Add Employee</a></li>
+            <li><a class="dropdown-item" href="/Employee/GetPeople">People</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+    
+      </ul>
+
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Admin
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="/Department/index">All Departments</a></li>
+                                <li><a class="dropdown-item" href="/Department/Create">Add Departments</a></li>
+                                <li><hr calsss="dropdwon-divider" /></li>
+                                <li><a class="dropdown-item" href="/Designation/Index">All Designations</a></li>
+                                <li><a class="dropdown-item" href="/Designation/Create">Add Designations</a></li>
+                                
+                            </ul>
+                        </li>
+
+                    </ul>
+
+                    
+
+       <ul class="navbar-nav me-auto mb-2 mb-lg-0">        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            HRM.Web
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" asp-area="" asp-controller="WebTest" asp-action="ShowList">List</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="WebTest" asp-action="ShowImage">Carousel</a>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="WebTest" asp-action="TableOfFive">Table of Five</a>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="WebTest" asp-action="TableOFGivenNumber"> Table of Numbers</a>
+                                <li>
+                                    <a class="dropdown-item" asp-area="" asp-controller="WebTest" asp-action="ArrayList"> Array Works</a>
+
+                                </li>
+          </ul>
+        </li>
+    
+      </ul>
+
+     
+    </div>
+  </div>
+</nav>
+
+     
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2022 - HRM.Web - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

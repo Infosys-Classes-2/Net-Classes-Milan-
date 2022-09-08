@@ -3,11 +3,14 @@
 }
 @model List<Employee>
 
-<table class="table">
-    <a></a>
-    <a class="btn btn-outline-primary" asp-controller="employee" asp-action="add" role="button">Add Employees</a>
+<a asp-controller="Employee" asp-action="Add" class="btn btn-success mt-2">
+    <i class="bi bi-plus"></i>Add
+</a>
+
+<table class="table ">
+   
+    
     <tr>
-        <th>Id</th>
        <th>First Name</th>
        <th>Last Name</th>
        <th>Designation</th>
@@ -19,17 +22,17 @@
     @foreach (Employee employee in Model)
     {
        <tr>
-           <td>@employee.Id</td>
-       <td>@employee.FirstName</td>
+        <td>@employee.FirstName</td>
        <td>@employee.LastName</td>
        <td>@employee.Designaton</td>
        <td>@employee.Level</td>
        <td>@employee.JoinDate</td>
        <td>@employee.Department</td>
-       <td><a class="btn btn-outline-primary" asp-controller="employee" asp-action="edit" role="button"/>edit employees</td>
-        <td><button type="button" class="btn btn-outline-primary">Delete</button></td>
-
-    </tr>
+       <td>
+           <a asp-controller="Employee" asp-action="Edit" asp-route-id="@employee.Id" title="Edit"></i></a>
+                <a href="/employee/delete/@employee.Id" title="Delete"><i class="bi bi-trash3 text-danger"></i></a>
+         </td>       
+     </tr>
     
     }
 </table>

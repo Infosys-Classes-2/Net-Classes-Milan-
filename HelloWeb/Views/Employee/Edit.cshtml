@@ -6,7 +6,7 @@
     Edit Employess
 </h4>
 <div class="card mt-2 p-4">
-<form asp-action="edit"   method="post">
+<form    method="post">
     <div class="mb-3">
     <label asp-for="Id" class="form-label"> </label>
     <input asp-for="Id" class="form-control"/>
@@ -35,6 +35,6 @@
     <label asp-for="JoinDate" class="form-label"> </label>
     <input asp-for="JoinDate" class="form-control"/>
     </div>
-    <button type="submit" > Save Details of employee</button>
+    <button type="submit" asp-action="edit" > Save Details of employee</button>
 </form>
 </div>

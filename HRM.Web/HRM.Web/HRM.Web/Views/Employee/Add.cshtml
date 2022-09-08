@@ -1,0 +1,57 @@
+﻿@using HRM.Web.ViewModels
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Add Employee";
+}
+@model EmployeeViewModel
+@{
+   // var department = ViewData["Department"];
+    //var degination = ViewData["Desgination"];
+}
+
+
+<div class="card mt-2 p-4"> 
+
+<form method="post" enctype="multipart/form-data">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="mb-3">
+        <label asp-for="FirstName" class="form-label"></label>
+            <span asp-validation-for="FirstName" class="text-danger"></span>
+        <input asp-for="FirstName" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="LastName" class="form-label"></label>
+        <input asp-for="LastName" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="DesignationName" class="form-label"></label>
+            <select asp-for="DesignationId" asp-items="@ViewData["Designations"] as IEnumerable<SelectListItem>" class="form-control">
+           </select>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Level" class="form-label"></label>
+            <input asp-for="Level" asp-items= class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="DepartmentName " class="form-label"></label>
+        <select asp-for="DepartmentId" asp-items="@ViewData["Departments"] as IEnumerable<SelectListItem>" class="form-control" >
+        </select>
+    </div>
+    <div class="mb-3">
+        <label asp-for="JoinDate" class="form-label"></label>
+         <input asp-for="JoinDate" class="form-control" />
+    </div>
+        <div class="mb-3">
+            <label asp-for="Avatar" class="form-label">Profile Image</label>
+            <input class="form-control" asp-for="Avatar">
+        </div>
+        <button type="submit" class="btn btn-success"><i class="bi bi-save"> Save Employee</i></button>
+</form>
+</div>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    }
