@@ -1,4 +1,5 @@
 using HRM.Infrastructure.Data;
+using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,6 +7,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<EmployeContext>();
 
+// Authentication ko lagi
+builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
+    .AddEntityFrameworkStores<EmployeContext>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -21,10 +25,13 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+//yo duita authenticaion ko lagi
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+app.MapRazorPages();
 
 app.Run();

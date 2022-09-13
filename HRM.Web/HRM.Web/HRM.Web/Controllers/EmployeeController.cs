@@ -44,16 +44,13 @@ public class EmployeeController : Controller
     }
     [HttpPost]
     public IActionResult Add(EmployeeViewModel employeeViewModel)
-    {
-        //Add to db
+    {        //Add to db
         //  EmployeContext db = new();
         //Save profile image to "profile-images" folder --Path.Combine combines multiple paths
         // var folderPath = Path.Combine(host.ContentRootPath, "profile-images");
 
         /*var folderPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "profile-images");
-
                 Directory.CreateDirectory(folderPath);
-
         var uniqueImageName = $"{Guid.NewGuid():D}_ {employee.Avatar.FileName}";
         var filePath =Path.Combine(folderPath , uniqueImageName);
 

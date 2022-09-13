@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using HRM.ApplicatonCore.Models;
+using HRM.Infrastructure.Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using HRM.Infrastructure.Data;
-using HRM.ApplicatonCore.Models;
+
 
 namespace HRM.Web.Controllers
 {
@@ -55,6 +57,8 @@ namespace HRM.Web.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
+        [Authorize]
+
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,title,category,Description")] Designation designation)
         {
@@ -87,6 +91,8 @@ namespace HRM.Web.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
+        [Authorize]
+
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,title,category,Description")] Designation designation)
         {
@@ -138,6 +144,8 @@ namespace HRM.Web.Controllers
 
         // POST: Designation/Delete/5
         [HttpPost, ActionName("Delete")]
+        [Authorize]
+
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {

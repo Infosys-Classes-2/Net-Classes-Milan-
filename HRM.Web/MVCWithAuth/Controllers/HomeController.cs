@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using MVCWithAuth.Models;
 using System.Diagnostics;
 
@@ -18,8 +17,8 @@ namespace MVCWithAuth.Controllers
         {
             return View();
         }
-        [Authorize]
-        public IActionResult Privacy() 
+
+        public IActionResult Privacy()
         {
             return View();
         }
