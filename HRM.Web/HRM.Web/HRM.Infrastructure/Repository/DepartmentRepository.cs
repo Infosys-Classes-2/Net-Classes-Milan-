@@ -36,15 +36,16 @@ namespace HRM.Infrastructure.Repository
         }
         public async Task<Department> GetAsync(int id) => await db.Departments.FindAsync(id);
        
-        public async Task<int> CommitAsync()
-        {
-            var rowsAffected = await db.SaveChangesAsync();
-            return rowsAffected;
-        }
+       
 
         public Task DeleteAsync(int? id)
         {
             throw new NotImplementedException();
+        }
+        public async Task<int> CommitAsync()
+        {
+            var rowsAffected = await db.SaveChangesAsync();
+            return rowsAffected;
         }
     }
 }
