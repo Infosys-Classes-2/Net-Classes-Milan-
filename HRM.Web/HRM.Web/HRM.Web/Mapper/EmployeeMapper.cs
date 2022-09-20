@@ -6,6 +6,7 @@ namespace HRM.Web.Mapper
 {
     public static class EmployeeMapper
     {
+        //      return garne type     || K MA CONVERT GAREKO
         public static EmployeeViewModel ToViewModel(this Employee employee)  //Extension methods
         {
             EmployeeViewModel employeeViewModel = new()

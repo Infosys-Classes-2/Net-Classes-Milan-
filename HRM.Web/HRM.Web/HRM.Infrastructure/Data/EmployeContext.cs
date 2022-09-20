@@ -1,14 +1,25 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using HRM.ApplicatonCore.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using HRM.Infrastructure.Migrations;
+using Microsoft.AspNetCore.Identity;
 
 namespace HRM.Infrastructure.Data
 {
     public class EmployeContext:IdentityDbContext
     {
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //Constructor banaiera DbContextOptions<EmployeContext> base ma pathako
+        public EmployeContext(DbContextOptions<EmployeContext> dbContextOptions): base(dbContextOptions)
         {
-            optionsBuilder.UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=HRMDb;Integrated Security=True;");
+        }
+        // Db Seeding 
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+            builder.Entity<IdentityRole>().HasData(
+                    new IdentityRole { Id=Guid.NewGuid().ToString(),Name="Admin"},
+                     new IdentityRole { Id = Guid.NewGuid().ToString(), Name = "HR" }
+                );
         }
         public DbSet<Employee> Employees { get; set; } //table name will be created on db EmployeeContext
         public DbSet<Department>Departments { get; set; }
