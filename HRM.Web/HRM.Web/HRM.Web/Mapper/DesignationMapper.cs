@@ -1,59 +1,44 @@
-﻿//using hrm.applicatoncore.models;
-//using hrm.web.viewmodels;
+﻿using HRM.ApplicatonCore.Models;
+using HRM.Web.ViewModels;
 
-//namespace hrm.web.mapper
-//{
-//    public static class designationmapper
-//    {
-//        // 1 ta designatinon ko lagi matra ho
-//        // model lai viewmodel ma bind gareko
-//        public static designationviewmodel toviewmodel(this designation designation)
-//        {
-//            // designation viewmodel ko naya instance banaune
+namespace HRM.Web.Mapper
+{
+    public static class DesignationMapper
+    {
+        public static DesignationViewModel ToViewModel(Designation designation)
+        {
+            DesignationViewModel designationViewModel = new()
+            {
+                Id = designation.Id,
+                title = designation.title,
+                category = designation.category,
+                Description =designation.category
+            };
+            return designationViewModel;
+        }
+        public static Designation ToModel(DesignationViewModel designationViewModel)
+        {
+            Designation desginaiton = new()
+            {
+                Id=designationViewModel.Id,
+                title= designationViewModel.title,
+                category= designationViewModel.category,
+                Description= designationViewModel.Description,
+            };
+            return desginaiton;
+        }
 
-//            designationviewmodel designationviewmodel = new()
-//            {
+        public static List<DesignationViewModel> ToViewModel(this List<Designation> designations)
+        {
+            var designationViewModels = designations.Select(x => ToViewModel(x)).ToList();
+            return designationViewModels;
+        }
+        public static List<Designation> ToModel(this List<DesignationViewModel> designationViewModels)
+        {
+            var desginations = designationViewModels.Select(x => ToModel(x)).ToList();
+            return desginations;
 
-//                id = designation.id,
-//                title = designation.title,
-//                description=designation.description,
-//                category = designation.category,
-//            };
+        }
 
-//            // return chai naya object lai garne
-//            return  designationviewmodel;
-//        }
-
-
-//       // view model bata aauune data lai model ma bind gareko
-//        public static designation tomodel(designationviewmodel designationviewmodel)
-//        {
-//            designation desiganiton = new()
-//            {
-//                id= designationviewmodel.id,
-//                title = designationviewmodel.title,
-//                description = designationviewmodel.description,
-//                category = designationviewmodel.category
-               
-//            };
-//            return desiganiton;
-//        }
-
-//        // model to viewmodel
-//        public static list<designationviewmodel> toviewmodel(this list<designation> designations)
-//        {
-//            // var employeeviewmodels = employees.select(x => toviewmodel(x)).tolist();
-//            var designationviewmodels = designations.select(x => toviewmodel(x)).tolist();
-//            return designationviewmodels;
-//        }
-
-//        // view model to model
-//        public static list<designation> tomodel(this list<designationviewmodel> desinationviewmodel)
-//        {
-//            var designation = desinationviewmodel.select(x => tomodel(x)).tolist();
-//            return designation;
-//        }
-
-//    }
-
-//}
+    }
+}
