@@ -61,8 +61,8 @@ namespace HRM.Web.Controllers
         {
            
         var departments =  await departmentRepository.AddAsync(departmentViewModel.ToModel());
-             
-            return View(departments);
+
+            return RedirectToAction(nameof(Index));
         }
 
         // GET: Department/Edit/5
@@ -80,7 +80,7 @@ namespace HRM.Web.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Description,Established")] DepartmentViewModel departmentViewModel)
         {
-            var department = departmentRepository.AddAsync(departmentViewModel.ToModel());
+            var department = departmentRepository.EditAsync(departmentViewModel.ToModel());
                return RedirectToAction(nameof(Index));
         }
 
