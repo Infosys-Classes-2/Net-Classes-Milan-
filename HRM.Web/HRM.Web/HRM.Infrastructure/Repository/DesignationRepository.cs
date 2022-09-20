@@ -20,19 +20,19 @@ namespace HRM.Infrastructure.Repository
         }
         public async Task<Designation> GetAsync(int id) => await db.Designations.FindAsync(id);
 
-        public async Task<int> AddAsync(Employee employee)
+        public async Task<int> AddAsync(Designation designation)
         {
-            await db.Employees.AddAsync(employee);
+            await db.Designations.AddAsync(designation);
             return await CommitAsync();
         }
-        public async Task<int> EditAsync(Employee employee)
+        public async Task<int> EditAsync(Designation designation)
         {
-             db.Employees.Update(employee);
+             db.Designations.Update(designation);
             return await CommitAsync();
         }
-        public async Task<int> DeleteAsync(Employee employee)
+        public async Task<int> DeleteAsync(Designation designation)
         {
-            db.Employees.Remove(employee);
+            db.Designations.Remove(designation);
             return await CommitAsync();
         }
         public async Task<int> CommitAsync()
