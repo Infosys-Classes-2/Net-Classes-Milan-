@@ -5,7 +5,7 @@ namespace HRM.Web.Mapper
 {
     public static class DesignationMapper
     {
-        public static DesignationViewModel ToViewModel(Designation designation)
+        public static DesignationViewModel ToViewModel(this Designation designation)
         {
             DesignationViewModel designationViewModel = new()
             {
@@ -16,7 +16,7 @@ namespace HRM.Web.Mapper
             };
             return designationViewModel;
         }
-        public static Designation ToModel(DesignationViewModel designationViewModel)
+        public static Designation ToModel(this DesignationViewModel designationViewModel)
         {
             Designation desginaiton = new()
             {
