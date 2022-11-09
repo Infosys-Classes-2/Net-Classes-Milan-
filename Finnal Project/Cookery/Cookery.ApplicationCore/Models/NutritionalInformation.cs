@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Cookery.ApplicationCore.Models
 {
-    public class FoodCategory
+    public class NutritionalInformation
     {
         public int Id { get; set; }
-        public string CategoryName { get; set; }
+        public string NutritionName { get; set; }
         public bool IsActive { get; set; }
+
         public ICollection<Recipe> Recipe { get; set; }
-      
     }
 }

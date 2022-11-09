@@ -4,16 +4,18 @@ using Cookery.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace Cookery.Data.Migrations
+namespace Cookery.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20221109030131_NutritionAndMeasurement")]
+    partial class NutritionAndMeasurement
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -374,21 +376,6 @@ namespace Cookery.Data.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("NutritionalInformationRecipe", b =>
-                {
-                    b.Property<int>("NutritionalInformationId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("RecipeId")
-                        .HasColumnType("int");
-
-                    b.HasKey("NutritionalInformationId", "RecipeId");
-
-                    b.HasIndex("RecipeId");
-
-                    b.ToTable("NutritionalInformationRecipe");
-                });
-
             modelBuilder.Entity("Cookery.ApplicationCore.Models.NutritionalInformation", b =>
                 {
                     b.HasOne("Cookery.ApplicationCore.Models.Measurement", null)
@@ -461,21 +448,6 @@ namespace Cookery.Data.Migrations
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("NutritionalInformationRecipe", b =>
-                {
-                    b.HasOne("Cookery.ApplicationCore.Models.NutritionalInformation", null)
-                        .WithMany()
-                        .HasForeignKey("NutritionalInformationId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Cookery.ApplicationCore.Models.Recipe", null)
-                        .WithMany()
-                        .HasForeignKey("RecipeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

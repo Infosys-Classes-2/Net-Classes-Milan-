@@ -18,7 +18,17 @@ namespace Cookery.ApplicationCore.Models
         // recipe ma dherai instructions hunxa kasari banaune vanera
         //public RecipeStep RecipeStep { get; set; }
         public ICollection<RecipeStep> RecipeStep { get; set; } 
+
+        //Difficulty ma reference rakheko
         public Difficulty Difficulty { get; set; }
+
+        // many nutritional infoormation
+        public ICollection<NutritionalInformation> NutritionalInformation { get; set; }
+
+        //many Food Category
+        public ICollection<FoodCategory> FoodCategorie { get; set; }
+
+       
 
 
 
