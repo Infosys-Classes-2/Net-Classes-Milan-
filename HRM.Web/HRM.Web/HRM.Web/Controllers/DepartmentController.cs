@@ -1,16 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using HRM.ApplicatonCore.Models;
-using HRM.Infrastructure.Data;
-using HRM.Infrastructure.Repository;
+﻿using HRM.Infrastructure.Repository;
 using HRM.Web.Mapper;
 using HRM.Web.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
 
 
 namespace HRM.Web.Controllers

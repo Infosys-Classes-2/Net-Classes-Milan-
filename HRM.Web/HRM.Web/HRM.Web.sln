@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HRM.ApplicationCore", "HRM.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HRM.Infrastructure", "HRM.Infrastructure\HRM.Infrastructure.csproj", "{D33539A7-B824-493D-A389-3DF01EFED5BB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRM.Api", "HRM.Api\HRM.Api.csproj", "{0AA8B1F1-29B0-4D59-B301-55EC8DC736D7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{D33539A7-B824-493D-A389-3DF01EFED5BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D33539A7-B824-493D-A389-3DF01EFED5BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D33539A7-B824-493D-A389-3DF01EFED5BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AA8B1F1-29B0-4D59-B301-55EC8DC736D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AA8B1F1-29B0-4D59-B301-55EC8DC736D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AA8B1F1-29B0-4D59-B301-55EC8DC736D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AA8B1F1-29B0-4D59-B301-55EC8DC736D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
